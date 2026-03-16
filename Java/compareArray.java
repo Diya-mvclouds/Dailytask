@@ -27,7 +27,7 @@ public class compareArray {
                 }
             }
             if(!diff){
-                System.out.print(arr2[i] + ",");
+                System.out.print(arr2[i] + " ");
             }
         }
         System.out.print("\nElements not in Array 2: ");
@@ -39,7 +39,7 @@ public class compareArray {
                 }
             }
             if(!diff){
-                System.out.print(arr1[i] + ",");
+                System.out.print(arr1[i] + " ");
             }
         }
     }
