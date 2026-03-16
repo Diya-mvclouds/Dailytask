@@ -15,6 +15,5 @@ public class wordPosition {
         else{
             System.out.println("Invalid position");
         }
-        sc.close();
     }
 }
