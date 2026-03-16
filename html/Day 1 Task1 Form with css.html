@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #486e90;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background: #f8f9f9;
+        width: 520px;
+        padding: 25px 30px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 18px;
+    }
+
+    .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 15px;
+        color: #2ebebe;
+        margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: none;
+        height: 60px;
+    }
+
+    .options {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .income-row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    input[type="range"] {
+        width: 150px;
+    }
+
+    .income-value {
+        background: #2cb89a;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .btn {
+        margin-top: 10px;
+        margin-left: auto;
+        display: block;
+        background: #2cb89a;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Account</h1>
+        <form onsubmit="event.preventDefault(); saveData();">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>First Name *</label>
+                    <input type="text" id="fname" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name *</label>
+                    <input type="text" id="lname" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Password *</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password *</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <div class="options">
+                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label><input type="radio" name="gender" value="Female" required> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Hobbies</label>
+                    <div class="options">
+                        <label><input type="checkbox" class="hobby" value="Music"> Music</label>
+                        <label><input type="checkbox" class="hobby" value="Sports"> Sports</label>
+                        <label><input type="checkbox" class="hobby" value="Travel"> Travel</label>
+                        <label><input type="checkbox" class="hobby" value="Movies"> Movies</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Source of Income *</label>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>Employed</option>
+                        <option>Student</option>
+                        <option>Business</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Income</label>
+                    <div class="income-row">
+                        <input type="range" id="incomeRange" min="0" max="100" value="20">
+                        <span class="income-value" id="incomeValue">20K</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Upload Profile Picture</label>
+                    <input type="file">
+                </div>
+
+                <div class="form-group">
+                    <label>Age *</label>
+                    <input type="number" id="age" min="1" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Bio *</label>
+                    <textarea id="bio" required></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Create</button>
+        </form>
+    </div>
+
+    <script>
+        let range = document.getElementById("incomeRange");
+        let output = document.getElementById("incomeValue");
+
+        range.oninput = function() {
+            output.textContent = this.value + "K";
+        };
+    </script>
+    <script type="module" src="Day 2 Task 5 firebase connection.js"></script>
+</body>
+</html>

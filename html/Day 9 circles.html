@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Circles</title>
+    <style>
+        body{
+            margin:0;
+            background:#eee;
+        }
+
+        #outer{
+            width:500px;
+            height:500px;
+            background:blue;
+            border-radius:50%;
+            position:absolute;
+            right:150px;
+            top:100px;
+        }
+
+        #drag{
+            width:450px;
+            height:450px;
+            background:red;
+            border-radius:50%;
+            position:absolute;
+            left:50px;
+            top:120px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer"></div>
+    <div id="drag"></div>
+
+    <script>
+
+        let outer = document.getElementById("outer");
+        let drag = document.getElementById("drag");
+        let size = 450;
+        let move = false;
+        let x,y;
+
+        drag.onmousedown = function(e){
+            move = true;
+            x = e.offsetX;
+            y = e.offsetY;
+        };
+
+        document.onmousemove = function(e){
+            if(move){
+                drag.style.left = e.pageX - x + "px";
+                drag.style.top = e.pageY - y + "px";
+            }
+        };
+
+        document.onmouseup = function(){
+
+            if(!move) return;
+            move = false;
+
+            let d = drag.getBoundingClientRect();
+            let o = outer.getBoundingClientRect();
+
+            if(d.left > o.left && d.right < o.right &&
+            d.top > o.top && d.bottom < o.bottom){
+
+                size -= 50;
+
+                if(size < 5) size = 5;
+
+                let c = document.createElement("div");
+                c.style.width = size + "px";
+                c.style.height = size + "px";
+                c.style.borderRadius = "50%";
+                c.style.position = "absolute";
+                c.style.background = randomColor();
+
+                c.style.left = (500 - size)/2 + "px";
+                c.style.top = (500 - size)/2 + "px";
+
+                outer.appendChild(c);
+
+                drag.style.left = "50px";
+                drag.style.top = "120px";
+                drag.style.background = randomColor();
+            }
+        };
+
+        function randomColor(){
+            let colors=["red","green","yellow","orange","purple","pink"];
+            return colors[Math.floor(Math.random()*colors.length)];
+        }
+    </script>
+
+</body>
+</html>
