@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class trainglePattern{
     public static void main(String[] args) {
-        int n = 5;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number for pattern: ");
+        int n = sc.nextInt();
         for (int i = 1; i <= n; i++){
             for (int j = n - i; j > 0; j--){
                System.out.print(" ");
