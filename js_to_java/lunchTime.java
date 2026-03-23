@@ -9,7 +9,7 @@ public class lunchTime {
 
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("hh:mm a");
         System.out.println("Current time: " + now.format(fmt));
-        System.out.println("Lunch time: " + now.format(fmt));
+        System.out.println("Lunch time: " + lunch.format(fmt));
 
         if (now.isAfter(lunch)) {
             System.out.println("Lunch time is already passed...!!");
