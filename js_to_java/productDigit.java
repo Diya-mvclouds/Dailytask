@@ -12,7 +12,7 @@ public class productDigit {
         }
         System.out.println("Sum: " + sum);
         System.out.print("products: ");
-        while(sum > 10){
+        while(sum >= 10){
             int product = 1;
             while(sum > 0){
                 product *= sum % 10;
