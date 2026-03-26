@@ -9,7 +9,6 @@ for(let i of n){
         odd = false;
     }
 }
-
 if(odd){
     console.log("It contains only odd numbers");
 }
