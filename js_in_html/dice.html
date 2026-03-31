@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Possibilities</title>
+</head>
+<body>
+    <h2>Enter Number of Dice</h2>
+    <input type="number" id="dice" placeholder="Enter number"><br><br>
+    <h2>Enter Targeted Sum</h2>
+    <input type="number" id="sum" placeholder="Enter number"><br><br>
+    <button onclick="dice()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function dice() {
+            let dice = document.getElementById("dice").value;
+            let sum = document.getElementById("sum").value;
+            function count(dice, sum){
+                if(dice == 0 && sum == 0){
+                    return 1;
+                }
+                if(dice == 0 || sum <= 0){
+                    return 0;
+                }
+                let ways = 0;
+                for(let i = 1; i <= 6; i++){
+                    ways += count(dice - 1, sum - i);
+                }
+                return ways;
+            }
+            document.getElementById("output").innerText = "Output: " + count(dice,sum);
+        }
+    </script>
+</body>
+</html>
