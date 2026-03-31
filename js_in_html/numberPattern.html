@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Pattern</title>
+</head>
+<body>
+    <h2>Number Pattern</h2>
+    <input type="number" id="num" placeholder="Enter number">
+    <button onclick="number()">Submit</button>
+    <pre id="output"></pre>
+    <script>
+        function number(){
+            let n = document.getElementById("num").value;
+            let result = "";
+            for(let i = 0; i <= n; i++){
+                let row = "";
+                for(let j = 0; j < n-i; j++){
+                    row += "  ";
+                }
+                row += "* ";
+                for(let j = 1; j <= i; j++){
+                    row += i +  " * ";
+                }
+                result += row + "\n";
+            }
+            document.getElementById("output").innerText = result;
+        }
+    </script>
+</body>
+</html>
