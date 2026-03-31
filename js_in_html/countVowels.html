@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count vowels</title>
+</head>
+<body>
+    <h2>Write something</h2>
+    <input type="text" id="text" placeholder="Write anything">
+    <button onclick="vowels()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function vowels() {
+            let str = document.getElementById("text").value;
+            let count = 0;
+            const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+            for (const char of str){
+                if (vowels.includes(char)){
+                    count++;
+                }
+            }
+            document.getElementById("output").innerHTML = "Total vowels: " + count;
+        }
+    </script>
+</body>
+</html>
