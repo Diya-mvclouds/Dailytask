@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Digits</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="number" id="number" placeholder="Enter number">
+    <button onclick="digits()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function digits() {
+            let num = document.getElementById("number").value;
+            document.getElementById("output").innerText = "Digits: " +  Math.abs(num).toString().length;
+        }
+    </script>
+</body>
+</html>
