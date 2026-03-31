@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASCII value sum</title>
+</head>
+<body>
+    <h2>ASCII Sum</h2>
+    <input type="text" id="input" placeholder="Enter a string">
+    <button onclick="sum()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function sum() {
+            let str = document.getElementById("input").value;
+            let arr = str.split("");
+            let b = 0;
+            for(const char of arr){
+                const ch = char.charCodeAt(0);
+                let a = Number(String(ch));
+                b += a;
+            }
+            document.getElementById("output").innerText ="Sum of ASCII values: " + b;
+        }
+    </script>
+</body>
+</html>
