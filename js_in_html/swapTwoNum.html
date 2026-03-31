@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swap Two Numbers</title>
+</head>
+<body>
+    <h2>Enter First Number</h2>
+    <input type="number" id="x" placeholder="Enter number"><br><br>
+    <h2>Enter Second Number</h2>
+    <input type="number" id="y" placeholder="Enter number"><br><br>
+    <button onclick="swap()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function swap() {
+            let x = Number(document.getElementById("x").value);
+            let y = Number(document.getElementById("y").value);
+            x = x + y;
+            y = x - y;
+            x = x - y;
+            document.getElementById("output").innerText = "After swap: " + "\nx: " + x + "\ny: " + y;
+        }
+    </script>
+</body>
+</html>
