@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASCII value transform</title>
+</head>
+<body>
+    <h2>Write something</h2>
+    <input type="text" id="text" placeholder="Write anything">
+    <button onclick="oddEven()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function oddEven() {
+            let str = document.getElementById("text").value;
+            let a = "";
+            for (const char of str){
+                let ch = char.charCodeAt(0);
+                if(ch % 2 == 0){
+                    a += char.toUpperCase()
+                }
+                else{
+                    a+= char.toLowerCase()
+                }
+            }
+            document.getElementById("output").innerText = "Output: " + a;
+        }
+    </script>
+</body>
+</html>
