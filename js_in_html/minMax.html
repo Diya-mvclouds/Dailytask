@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Min Max value</title>
+</head>
+<body>
+    <h2>Enter numbers space separately</h2>
+    <input type="text" id="number" placeholder="Enter a number">
+    <button onclick="minMax()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function minMax() {
+            let num = document.getElementById("number").value;
+            let n = num.split(" ").map(Number);
+            let max = Math.max(...n);
+            let min = Math.min(...n);
+            document.getElementById("output").innerText = "Maximum: " + max + "\nMinimum: " + min;
+        }
+    </script>
+</body>
+</html>
