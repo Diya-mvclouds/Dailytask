@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>check word in sentence</title>
+</head>
+<body>
+    <h2>Enter sentence</h2>
+    <input type="text" id="sent" placeholder="Write anything"><br><br>
+    <h2>Enter word</h2>
+    <input type="text" id="word" placeholder="Enter word"><br><br>
+    <button onclick="element()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function element() {
+            let sent = document.getElementById("sent").value;
+            let word = document.getElementById("word").value;
+            let a = "";
+            if(sent.includes(word)){
+                a += "Word found..!";
+            }
+            else{
+                a += "Word not found..!!";
+            }
+            document.getElementById("output").innerText = a;
+        }
+    </script>
+</body>
+</html>
