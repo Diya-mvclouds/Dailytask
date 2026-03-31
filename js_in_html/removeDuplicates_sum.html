@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unique numbers sum</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="text" id="number" placeholder="Enter number">
+    <button onclick="unique()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function unique() {
+            let num = document.getElementById("number").value;
+            let n = num.split(" ");
+            a=[];
+            sum = 0;
+            for (const i of n){
+                if(!a.includes(i)){
+                    a.push(i);
+                    sum += Number(i);
+                }
+            }
+            document.getElementById("output").innerText = "Unique Numbers: " + a + "\nSum of Unique numbers: " + sum;
+        }
+    </script>
+</body>
+</html>
