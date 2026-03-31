@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort string</title>
+</head>
+<body>
+    <h2>Write something</h2>
+    <input type="text" id="text" placeholder="Write anything">
+    <button onclick="sort()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function sort() {
+            let str = document.getElementById("text").value;
+            let arr = str.split("");
+            for(let i= 0; i < arr.length; i++){
+                for(let j= i+1; j < arr.length; j++){
+
+                    if(arr[i].charCodeAt(0) > arr[j].charCodeAt(0)){
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            let result = arr.join("");
+            document.getElementById("output").innerHTML = "Sorted string: " + result;
+        }
+    </script>
+</body>
+</html>
