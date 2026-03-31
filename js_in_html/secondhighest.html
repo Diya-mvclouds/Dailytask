@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Highest Number</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="text" id="number" placeholder="Enter number">
+    <button onclick="num()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function num() {
+            let a = document.getElementById("number").value;
+            let arr = a.split(" ");
+            let highest = 0;
+            for(let i of arr){
+                if(i > highest){
+                    secondhighest = highest;
+                    highest = i;
+                }
+                else if(i > secondhighest && i != highest){
+                    secondhighest = i;
+                }
+            }
+            document.getElementById("output").innerText = "Second Highest number is " + secondhighest;
+        }
+    </script>
+</body>
+</html>
