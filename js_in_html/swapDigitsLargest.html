@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swap Digits</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="number" id="number" placeholder="Enter number">
+    <button onclick="digits()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function digits() {
+            let num = document.getElementById("number").value;
+            let x = Math.floor(num / 10);
+            let y = num % 10;
+            let swap = y * 10 + x;
+            document.getElementById("output").innerText = num >= swap;
+        }
+    </script>
+</body>
+</html>
