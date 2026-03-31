@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Right shift</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="number" id="number" placeholder="Enter a number"><br><br>
+    <input type="number" id="shift" placeholder="Enter a shift number"><br><br>
+    <button onclick="rightShift()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function rightShift() {
+            let num = document.getElementById("number").value;
+            let shift = document.getElementById("shift").value;
+            document.getElementById("output").innerText ="Output: " + Math.floor(num / Math.pow(2, shift));
+        }
+    </script>
+</body>
+</html>
