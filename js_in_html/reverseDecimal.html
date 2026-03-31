@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Decimal</title>
+</head>
+<body>
+    <h2>Enter Decimal Number</h2>
+    <input type="number" id="decimal" placeholder="Enter number"><br><br>
+    <button onclick="decimal()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function decimal() {
+            let n = document.getElementById("decimal").value;
+            document.getElementById("output").innerText = "Output: " + n.split('').reverse().join("");
+        }
+    </script>
+</body>
+</html>
