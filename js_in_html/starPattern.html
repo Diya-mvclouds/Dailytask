@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Pattern</title>
+</head>
+<body>
+    <h2>Left Star Pattern</h2>
+    <input type="number" id="num" placeholder="Enter number">
+    <button onclick="star()">Submit</button>
+    <pre id="output"></pre>
+    <script>
+        function star(){
+            let n = document.getElementById("num").value;
+            let result = "";
+            for (let i = 0; i < n; i++) {
+                let row = "";
+                for (let j = 0; j <= i; j++) {
+                    if (j == 0 || j == i || i == n - 1) {
+                        row += "* ";
+                    } else {
+                        row += "  ";
+                    }
+                }
+                result += row + "\n";
+            }
+            document.getElementById("output").innerText = result;
+        }
+    </script>
+</body>
+</html>
