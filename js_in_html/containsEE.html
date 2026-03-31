@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check string</title>
+</head>
+<body>
+    <h2>Enter a Word</h2>
+    <input type="text" id="text" placeholder="Write anything">
+    <button onclick="text()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function text() {
+            let n = document.getElementById("text").value;
+            document.getElementById("output").innerText = "This word contains 'ee': " + n.includes("ee");
+        }
+    </script>
+</body>
+</html>
