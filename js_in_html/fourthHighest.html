@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fourth highest number</title>
+</head>
+<body>
+    <h2>Enter a Numbers</h2>
+    <input type="text" id="number" placeholder="Enter number">
+    <button onclick="num()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function num() {
+            let num = document.getElementById("number").value;
+            let a = num.split(" ");
+            let lowest = Infinity;
+            let secondlowest = Infinity;
+            for(let i of a){
+                if(i < lowest){
+                    secondlowest = lowest;
+                    lowest = i;
+                }
+                else if(i < secondlowest && i != lowest){
+                    secondlowest = i;
+                }
+            }
+            document.getElementById("output").innerText = secondlowest;
+        }
+    </script>
+</body>
+</html>
