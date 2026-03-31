@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upper case in front</title>
+</head>
+<body>
+    <h2>Write something</h2>
+    <input type="text" id="text" placeholder="Write anything">
+    <button onclick="upperCase()">Submit</button>
+    <p id="output"></p>
+    <script>
+    function upperCase() {
+        let str = document.getElementById("text").value;
+        let upper = "", lower = "";
+        for (let ch of str) {
+            if (ch === ch.toUpperCase()) {
+                upper += ch;
+            } else {
+                lower += ch;
+            }
+        }
+        document.getElementById("output").innerText = "Output: " + upper + lower;
+    }
+    </script>
+</body>
+</html>
