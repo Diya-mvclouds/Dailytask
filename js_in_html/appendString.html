@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Append String</title>
+</head>
+<body>
+    <h2>Enter Something</h2>
+    <input type="text" id="text" placeholder="Write anything">
+    <button onclick="text()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function text() {
+            let n = document.getElementById("text").value;
+            document.getElementById("output").innerText = n + " Something";
+        }
+    </script>
+</body>
+</html>
