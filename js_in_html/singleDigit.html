@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>convert into Single Digit</title>
+</head>
+<body>
+    <h2>Enter a number with space separately</h2>
+    <input type="text" id="text" placeholder="Write anything">
+    <button onclick="digit()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function digit() {
+            let n = document.getElementById("text").value;
+            let numbers = n.split(" ").map(Number);
+            let sum = numbers.reduce((total, num) => total + num, 0);
+
+            while (sum >= 10) {
+                sum = sum.toString().split("").reduce((product, digit) => product * Number(digit), 1);
+            }
+            document.getElementById("output").innerHTML = "Output: " + sum;
+        }
+    </script>
+</body>
+</html>
