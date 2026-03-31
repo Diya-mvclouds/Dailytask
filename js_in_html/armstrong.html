@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong number</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="number" id="number" placeholder="Enter number">
+    <button onclick="armstrong()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function armstrong() {
+            let num = document.getElementById("number").value;
+            let i = num;
+            let sum = 0;
+            let x = "";
+            let count = num.length;
+            while(num > 0){
+                let digit = num % 10;
+                sum += Math.pow(digit,count);
+                num = Math.floor(num / 10);
+            }
+            if(sum == i){
+                x += "Armstrong number";
+            }
+            else{
+                x += "not an Armstrong number";
+            }
+            document.getElementById("output").innerText = sum + " is " + x;
+        }
+    </script>
+</body>
+</html>
