@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle Pattern</title>
+</head>
+<body>
+    <h2>Triangle Pattern</h2>
+    <input type="number" id="num" placeholder="Enter number">
+    <button onclick="triangle()">Submit</button>
+    <pre id="output"></pre>
+    <script>
+        function triangle(){
+            let n = document.getElementById("num").value;
+            let result = "";
+            for (let i = 1; i <= n; i++){
+                let row = "";
+                for (j = n - i; j > 0; j--){
+                    row += " ";
+                }
+                for (k = 1; k <= (2*i-1); k++) {
+                    if((i == n && k % 2 != 0) || k == 1 || k == (2*i-1)){
+                        row += "*";
+                    }
+                    else{
+                        row += " ";
+                    }
+                }
+                result += row + "\n";
+            }
+            document.getElementById("output").innerText = result;
+        }
+    </script>
+</body>
+</html>
