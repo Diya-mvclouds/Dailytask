@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse String</title>
+</head>
+<body>
+    <h2>Enter Sentence</h2>
+    <input type="text" id="sent" placeholder="Write anything"><br><br>
+    <button onclick="text()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function text() {
+            let str = document.getElementById("sent").value;
+            let word = str.split(" ");
+            let result = "";
+            for(let i = word.length - 1; i >= 0; i--){
+                result += word[i] + " ";
+            }
+            document.getElementById("output").innerText = "Output: " + result;
+        }
+    </script>
+</body>
+</html>
