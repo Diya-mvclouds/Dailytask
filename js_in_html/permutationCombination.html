@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Permutation Combination</title>
+</head>
+<body>
+    <h2>Enter Total Number</h2>
+    <input type="number" id="total" placeholder="Enter number"><br><br>
+    <h2>Enter Selected Number</h2>
+    <input type="number" id="selected" placeholder="Enter number"><br><br>
+    <button onclick="fact()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function fact() {
+            let n = document.getElementById("total").value;
+            let r = document.getElementById("selected").value;
+            let a = "";
+            let b = "";
+            function factorial(n){
+                let fact = 1;
+                for(let i = 1; i <= n; i++){
+                    fact *= i;
+                }
+                return fact;
+            }
+            per = factorial(n) / factorial(n-r);
+            com = factorial(n) / (factorial(r) * factorial(n-r));
+            a += `Permutation of ${n} & ${r} is ${per}`;
+            b += `Combination of ${n} & ${r} is ${com}`;
+            document.getElementById("output").innerText = a + "\n" + b;
+        }
+    </script>
+</body>
+</html>
