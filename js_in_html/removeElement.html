@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Element</title>
+</head>
+<body>
+    <h2>Enter Elements in array</h2>
+    <input type="text" id="num" placeholder="Enter numbers"><br><br>
+    <h2>Enter Remove Number</h2>
+    <input type="number" id="remove" placeholder="Enter number"><br><br>
+    <button onclick="remove()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function remove() {
+            let n = document.getElementById("num").value;
+            let arr = n.split(" ");
+            let r = document.getElementById("remove").value;
+            arr = arr.filter(i => i != r);
+            document.getElementById("output").innerText = "Output: " + arr;
+        }
+    </script>
+</body>
+</html>
