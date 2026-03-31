@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check word position</title>
+</head>
+<body>
+    <h2>Enter Sentence</h2>
+    <input type="text" id="sent" placeholder="Write anything"><br><br>
+    <h2>Enter number</h2>
+    <input type="number" id="n" placeholder="Enter number"><br><br>
+    <button onclick="word()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function word() {
+            let sent = document.getElementById("sent").value;
+            let n = document.getElementById("n").value;
+            let word = sent.split(" ");
+            let result = "";
+            if(n>0 && n<= word.length){
+                result += word[n-1];
+            }
+            else{
+                result += "Invalid position..!!";
+            }
+            document.getElementById("output").innerText = "Output: " + result;
+        }
+    </script>
+</body>
+</html>
