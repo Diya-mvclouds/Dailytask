@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find element</title>
+</head>
+<body>
+    <h2>Enter sentence</h2>
+    <input type="text" id="str" placeholder="Write anything"><br><br>
+    <h2>Enter character</h2>
+    <input type="text" id="char" placeholder="Enter character"><br><br>
+    <button onclick="element()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function element() {
+            let str = document.getElementById("str").value;
+            let char = document.getElementById("char").value;
+            let a = "";
+            for(let i = 0; i < str.length; i++){
+                if(str.charAt(i) == char){
+                    a += i + " ";
+                }
+            }
+            document.getElementById("output").innerText = "Index position of character is: " + a;
+        }
+    </script>
+</body>
+</html>
