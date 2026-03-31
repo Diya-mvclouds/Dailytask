@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check odd even</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="text" id="number" placeholder="Enter number">
+    <button onclick="odd()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function odd() {
+            let num = document.getElementById("number").value;
+            let n = num.split(" ");
+            let a = "";
+            console.log(n);
+            let odd = true;
+
+            for(let i of n){
+                if(i % 2 == 0){
+                    odd = false;
+                }
+            }
+            if(odd){
+                a += "It contains only odd numbers";
+            }
+            else{
+                a += "It contains even numbers";
+            }
+            document.getElementById("output").innerText = a;
+        }
+    </script>
+</body>
+</html>
