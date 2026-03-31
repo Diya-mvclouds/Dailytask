@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove trailing & leading zeros</title>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="number" id="number" placeholder="Enter number">
+    <button onclick="zeros()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function zeros() {
+            let num = document.getElementById("number").value;
+            document.getElementById("output").innerText = "Output: " + String(Number(num));
+        }
+    </script>
+</body>
+</html>
