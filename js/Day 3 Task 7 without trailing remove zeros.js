@@ -1,4 +1,3 @@
-const prompt = require("prompt-sync")();
-let n = prompt("Enter a nummber: ");
-let result = String(Number(n));
-console.log("Result:", result);;
+function removeZeros(n) {
+    return "Without Leading & trailing zeros: " + String(Number(n));
+}

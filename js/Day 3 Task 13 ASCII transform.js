@@ -1,14 +1,12 @@
-const prompt = require("prompt-sync")();
-let str = prompt("Enter a sentence: ");
-let a = "";
-for (const char of str){
-    let ch = char.charCodeAt(0);
-    // a += ch % 2 == 0 ? char.toUpperCase() : char.toLowerCase();
-    if(ch % 2 == 0){
-        a += char.toUpperCase()
+function transform(str) {
+    let a = "";
+    for (let char of str) {
+        let ch = char.charCodeAt(0);
+        if (ch % 2 == 0) {
+            a += char.toUpperCase();
+        } else {
+            a += char.toLowerCase();
+        }
     }
-    else{
-        a+= char.toLowerCase()
-    }
+    return a;
 }
-console.log(a);

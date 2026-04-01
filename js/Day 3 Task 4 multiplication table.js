@@ -1,5 +1,7 @@
-const prompt = require("prompt-sync")();
-let n = prompt("Enter a number: ");
-for (let i = 1; i <= 10; i++) {
-    console.log(`${n} x ${i} = ${n * i}`);
+function multiply(n) {
+    let output = "";
+    for (let i = 1; i <= 10; i++) {
+        output += `${n} x ${i} = ${n * i}<br>`;
+    }
+    return output;
 }

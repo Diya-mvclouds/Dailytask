@@ -1,10 +1,10 @@
-const prompt = require("prompt-sync")();
-let str = prompt("Enter anything: ");
-let count = 0;
-const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-for (const char of str){
-    if (vowels.includes(char)){
-        count++;
+function vowel(str) {
+    let count = 0;
+    let vowels = "aeiouAEIOU";
+    for (let ch of str) {
+        if (vowels.includes(ch)) {
+            count++;
+        }
     }
+    return "Total vowels: " + count;
 }
-console.log(count)

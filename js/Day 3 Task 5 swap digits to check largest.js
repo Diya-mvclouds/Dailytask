@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")();
-let num = prompt("Enter a numbers: ");
-const swapped = Number(num.toString().split('').reverse().join(''));
-console.log(num >= swapped);
+function swapDigits(num) {
+    let swap = Number(num.split('').reverse().join(''));
+    return "Number is greater than swapped number or not: " + num >= swap;
+}

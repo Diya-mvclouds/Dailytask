@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")();
-let num = prompt("Enter a numbers: ");
-let n = num.split(' ').map(Number);
-console.log(`${Math.max(...n)} ${Math.min(...n)}`);
+function minMax(input) {
+    let n = input.split(' ').map(Number);
+    return ` Maximum: ${Math.max(...n)} <br> Minimum: ${Math.min(...n)}`;
+}
