@@ -1,3 +1,3 @@
-const prompt = require("prompt-sync")();
-let n = prompt("Write anything: ");
-console.log(n + " Something")
+function append(n) {
+    return n + " Something";
+}
