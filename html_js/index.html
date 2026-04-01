@@ -93,9 +93,17 @@
 
     <script src="main.js"></script>
     <script>
+    let lastTask = "";
+
     function update() {
         let task = document.getElementById("task").value;
         let a = document.getElementById("a");
+        if (task !== lastTask) {
+            document.getElementById("input1").value = "";
+            document.getElementById("input2").value = "";
+            document.getElementById("output").innerHTML = "";
+        }
+        lastTask = task;
         switch(task) {
             case "1":
                 a.innerHTML = "Enter any string to append 'Something' in it.";
@@ -151,7 +159,7 @@
                 input1.placeholder = "Enter string";
                 break;
             case "14":
-                a.innerHTML = "Enter numbers for finding Maximun value & Minimum value";
+                a.innerHTML = "Enter numbers for finding Maximum & Minimum value";
                 input1.placeholder = "Enter space separated numbers";
                 break;
             case "15": 
@@ -176,8 +184,8 @@
                 break;
             case "20": 
                 a.innerHTML = "Enter 2 arrays for comparing (use second box)"; 
-                input1.placeholder = "Enter space separated numbers in array 1";
-                input2.placeholder = "Enter space separated numbers in array 2";
+                input1.placeholder = "Enter array 1";
+                input2.placeholder = "Enter array 2";
                 break;
             case "21": 
                 a.innerHTML = "Enter number for Butterfly pattern"; 
@@ -224,31 +232,31 @@
                 input1.placeholder = "Enter 5 numbers";
                 break;
             case "32":
-                a.innerHTML = "Enter string & character for find element(use second box)";
+                a.innerHTML = "Enter string & character (use second box)";
                 input1.placeholder = "Enter text";
                 input2.placeholder = "Enter character";
                 break;
             case "33":
-                a.innerHTML = "Enter a sentence & word for find word in sentence(use second box)";
+                a.innerHTML = "Enter sentence & word (use second box)";
                 input1.placeholder = "Enter sentence";
                 input2.placeholder = "Enter word";
                 break;
             case "34":
-                a.innerHTML = "Enter a total number & selected number for permutation & combination(use second box)";
-                input1.placeholder = "Enter total number";
-                input2.placeholder = "Enter selected number";
+                a.innerHTML = "Enter total & selected number";
+                input1.placeholder = "Enter total";
+                input2.placeholder = "Enter selected";
                 break;
             case "35":
-                a.innerHTML = "Enter numbers in array + remove element(use second box)";
-                input1.placeholder = "Enter space separated numbers";
+                a.innerHTML = "Enter array & element to remove";
+                input1.placeholder = "Enter numbers";
                 input2.placeholder = "Enter remove number";
                 break;
             case "36":
-                a.innerHTML = "Enter Decimal number for reverse";
-                input1.placeholder = "Enter Decimal number";
+                a.innerHTML = "Enter decimal number to reverse";
+                input1.placeholder = "Enter decimal";
                 break;
             case "37":
-                a.innerHTML = "Enter Sentence for reverse words";
+                a.innerHTML = "Enter sentence to reverse";
                 input1.placeholder = "Enter sentence";
                 break;
             default:
@@ -256,6 +264,5 @@
         }
     }
     </script>
-
 </body>
 </html>
