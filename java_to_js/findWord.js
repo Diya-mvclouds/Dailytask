@@ -1,9 +1,10 @@
-const prompt = require("prompt-sync")();
-let sent = prompt("Write a sentence: ");
-let word = prompt("Enter a word: ");
-if(sent.includes(word)){
-    console.log("Word found..!");
-}
-else{
-    console.log("Word not found..!!")
+function findWord(sent,word){
+    let a = "";
+    if(sent.includes(word)){
+        a += "Word found..!";
+    }
+    else{
+        a += "Word not found..!!";
+    }
+    return a;
 }
