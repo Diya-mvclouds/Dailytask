@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All JS Tasks</title>
+</head>
+<body>
+    <h2>All JS Tasks</h2>
+    <select id="task" onchange="update()">
+        <option value="">Select Task</option>
+        <option value="1">Append String</option>
+        <option value="2">Count Digits</option>
+        <option value="3">Check 'ee'</option>
+        <option value="4">Multiplication Table</option>
+        <option value="5">Swap & Compare</option>
+        <option value="6">Right Shift</option>
+        <option value="7">Remove Trailing Zeros</option>
+        <option value="8">Count Vowels</option>
+        <option value="9">Capital in Front</option>
+        <option value="10">Sort ASCII</option>
+        <option value="11">Single Digit</option>
+        <option value="12">Factors</option>
+        <option value="13">ASCII Transform</option>
+        <option value="14">Highest & Lowest</option>
+        <option value="15">ASCII value Subtract</option>
+        <option value="16">ASCII value Sum</option>
+        <option value="17">Remove Duplicates & Sum</option>
+        <option value="18">Armstrong</option>
+        <option value="19">Check odd</option>
+        <option value="20">Compare Array</option>
+        <option value="21">Butterfly Pattern</option>
+        <option value="22">Diamond Pattern</option>
+        <option value="23">Eight Pattern</option>
+        <option value="24">Increasing Number Pattern</option>
+        <option value="25">Number + Star Pattern</option>
+        <option value="26">Rectangle Pattern</option>
+        <option value="27">Star Pattern</option>
+        <option value="28">Swastik</option>
+        <option value="29">Triangle</option>
+        <option value="30">Triangle Pattern</option>
+        <option value="31">Fourth highest</option>
+        <option value="32">Find element</option>
+        <option value="33">Find word</option>
+        <option value="34">Permutation Combination</option>
+        <option value="35">Remove Element</option>
+        <option value="36">Reverse Decimal</option>
+        <option value="37">Reverse String</option>
+    </select>
+    <br><br>
+    <p id="a"></p>
+    <input id="input1" placeholder="Enter input" style="inline-size: 250px;"><br><br>
+    <input type="text" id="input2" placeholder="Second input(if used)" style="inline-size: 250px;">
+    <br><br>
+    <button onclick="run()">Run</button>
+    <pre id="output"></pre>
+
+    <script src="../js/Day 3 Task 1 append to string.js"></script>
+    <script src="../js/Day 3 Task 2 count digits in given number.js"></script>
+    <script src="../js/Day 3 Task 3 check EE in string.js"></script>
+    <script src="../js/Day 3 Task 4 multiplication table.js"></script>
+    <script src="../js/Day 3 Task 5 swap digits to check largest.js"></script>
+    <script src="../js/Day 3 Task 6 right shift operator.js"></script>
+    <script src="../js/Day 3 Task 7 without trailing remove zeros.js"></script>
+    <script src="../js/Day 3 Task 8 count vowels.js"></script>
+    <script src="../js/Day 3 Task 9 capital in front.js"></script>
+    <script src="../js/Day 3 Task 10 sort string by ASCII.js"></script>
+    <script src="../js/Day 3 Task 11 convert into single digit.js"></script>
+    <script src="../js/Day 3 Task 12 all factor of number.js"></script>
+    <script src="../js/Day 3 Task 13 ASCII transform.js"></script>
+    <script src="../js/Day 3 Task 14 lowest & highest number.js"></script>
+    <script src="../js/asciivaluesubtract.js"></script>
+    <script src="../js/asciivaluesum.js"></script>
+    <script src="../js/removeDuplicates_sum.js"></script>
+    <script src="../java_to_js/armstrong.js"></script>
+    <script src="../java_to_js/checkOdd.js"></script>
+    <script src="../java_to_js/compareArray.js"></script>
+    <script src="../java_to_js/butterflyPattern.js"></script>
+    <script src="../java_to_js/diamondPattern.js"></script>
+    <script src="../java_to_js/eightPattern.js"></script>
+    <script src="../java_to_js/number.js"></script>
+    <script src="../java_to_js/numberPattern.js"></script>
+    <script src="../java_to_js/rectangle.js"></script>
+    <script src="../java_to_js/starPattern.js"></script>
+    <script src="../java_to_js/swastik.js"></script>
+    <script src="../java_to_js/triangle.js"></script>
+    <script src="../java_to_js/trianglePattern.js"></script>
+    <script src="../java_to_js/fourthHighest.js"></script>
+    <script src="../java_to_js/findElement.js"></script>
+    <script src="../java_to_js/findWord.js"></script>
+    <script src="../java_to_js/permutationCombination.js"></script>
+    <script src="../java_to_js/removeElement.js"></script>
+    <script src="../java_to_js/reverseDecimal.js"></script>
+    <script src="../java_to_js/reverseString.js"></script>
+
+    <script src="main.js"></script>
+    <script>
+    function update() {
+        let task = document.getElementById("task").value;
+        let a = document.getElementById("a");
+        switch(task) {
+            case "1":
+                a.innerHTML = "Enter any string to append 'Something' in it.";
+                input1.placeholder = "Enter text";
+                break;
+            case "2":
+                a.innerHTML = "Enter a numbers to count digits.";
+                input1.placeholder = "Enter numbers";
+                break;
+            case "3":
+                a.innerHTML = "Enter a string to check if contains 'ee' or not.";
+                input1.placeholder = "Enter string";
+                break;
+            case "4":
+                a.innerHTML = "Enter a number to show multiplication table.";
+                input1.placeholder = "Enter number";
+                break;
+            case "5":
+                a.innerHTML = "Enter a number to compare it with reversed number.";
+                input1.placeholder = "Enter 2-digit number";
+                break;
+            case "6":
+                a.innerHTML = "Enter number + shift value (use second box).";
+                input1.placeholder = "Enter total number";
+                input2.placeholder = "Enter shift number";
+                break;
+            case "7":
+                a.innerHTML = "Enter number to removes trailing zeros.";
+                input1.placeholder = "Enter number";
+                break;
+            case "8":
+                a.innerHTML = "Enter a string. It counts vowels.";
+                input1.placeholder = "Enter text";
+                break;
+            case "9":
+                a.innerHTML = "Enter string for shifting all Capital letters in front.";
+                input1.placeholder = "Enter text";
+                break;
+            case "10":
+                a.innerHTML = "Enter string to sort characters by ASCII.";
+                input1.placeholder = "Enter text";
+                break;
+            case "11":
+                a.innerHTML = "Enter numbers for convert it into single digit.";
+                input1.placeholder = "Enter space separated numbers";
+                break;
+            case "12":
+                a.innerHTML = "Enter number to show all factors.";
+                input1.placeholder = "Enter number";
+                break;
+            case "13":
+                a.innerHTML = "Enter string for ASCII value, even in uppercase & odd in lowercase.";
+                input1.placeholder = "Enter string";
+                break;
+            case "14":
+                a.innerHTML = "Enter numbers for finding Maximun value & Minimum value";
+                input1.placeholder = "Enter space separated numbers";
+                break;
+            case "15": 
+                a.innerHTML = "Enter string to do ASCII value subtraction"; 
+                input1.placeholder = "Enter text";
+                break;
+            case "16": 
+                a.innerHTML = "Enter string to do ASCII value sum"; 
+                input1.placeholder = "Enter text";
+                break;
+            case "17": 
+                a.innerHTML = "Enter numbers to remove duplicates & sum"; 
+                input1.placeholder = "Enter space separated numbers";
+                break;
+            case "18": 
+                a.innerHTML = "Enter number to check Armstrong"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "19": 
+                a.innerHTML = "Enter numbers to check all odd"; 
+                input1.placeholder = "Enter space separated numbers";
+                break;
+            case "20": 
+                a.innerHTML = "Enter 2 arrays for comparing (use second box)"; 
+                input1.placeholder = "Enter space separated numbers in array 1";
+                input2.placeholder = "Enter space separated numbers in array 2";
+                break;
+            case "21": 
+                a.innerHTML = "Enter number for Butterfly pattern"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "22": 
+                a.innerHTML = "Enter number for Diamond pattern"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "23": 
+                a.innerHTML = "Enter odd number for Eight pattern"; 
+                input1.placeholder = "Enter odd number";
+                break;
+            case "24": 
+                a.innerHTML = "Enter number for Increasing Number pattern"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "25": 
+                a.innerHTML = "Enter number for star + number Pattern"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "26": 
+                a.innerHTML = "Enter number for Rectangle pattern"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "27": 
+                a.innerHTML = "Enter number for Star pattern"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "28": 
+                a.innerHTML = "Enter odd number for Swastik"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "29": 
+                a.innerHTML = "Enter number for Triangle"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "30": 
+                a.innerHTML = "Enter number for Triangle pattern"; 
+                input1.placeholder = "Enter number";
+                break;
+            case "31":
+                a.innerHTML = "Enter 5 numbers for fourth highest";
+                input1.placeholder = "Enter 5 numbers";
+                break;
+            case "32":
+                a.innerHTML = "Enter string & character for find element(use second box)";
+                input1.placeholder = "Enter text";
+                input2.placeholder = "Enter character";
+                break;
+            case "33":
+                a.innerHTML = "Enter a sentence & word for find word in sentence(use second box)";
+                input1.placeholder = "Enter sentence";
+                input2.placeholder = "Enter word";
+                break;
+            case "34":
+                a.innerHTML = "Enter a total number & selected number for permutation & combination(use second box)";
+                input1.placeholder = "Enter total number";
+                input2.placeholder = "Enter selected number";
+                break;
+            case "35":
+                a.innerHTML = "Enter numbers in array + remove element(use second box)";
+                input1.placeholder = "Enter space separated numbers";
+                input2.placeholder = "Enter remove number";
+                break;
+            case "36":
+                a.innerHTML = "Enter Decimal number for reverse";
+                input1.placeholder = "Enter Decimal number";
+                break;
+            case "37":
+                a.innerHTML = "Enter Sentence for reverse words";
+                input1.placeholder = "Enter sentence";
+                break;
+            default:
+                a.innerHTML = "";
+        }
+    }
+    </script>
+
+</body>
+</html>
